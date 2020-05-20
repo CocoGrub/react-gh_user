@@ -11,16 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbcab590-aaa1-497d-a395-5a936dd1ba28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/About.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/alert/alertContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/alert/alertState.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webplayer" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -81,8 +83,16 @@
       <updated>1589923767938</updated>
       <workItem from="1589923773122" duration="26000" />
       <workItem from="1589923869004" duration="599000" />
-      <workItem from="1589974207829" duration="1769000" />
+      <workItem from="1589974207829" duration="9173000" />
     </task>
+    <task id="LOCAL-00001" summary="initialize">
+      <created>1589976453432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589976453432</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,10 +110,30 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initialize" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialize" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1589923795080">
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1589987274415">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1589923795080" />
+    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1589987274415" />
+    <state width="2027" height="305" key="GridCell.Tab.0.bottom" timestamp="1589976674181">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1589976674181" />
+    <state width="2027" height="305" key="GridCell.Tab.0.center" timestamp="1589976674181">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1589976674181" />
+    <state width="2027" height="305" key="GridCell.Tab.0.left" timestamp="1589976674181">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1589976674181" />
+    <state width="2027" height="305" key="GridCell.Tab.0.right" timestamp="1589976674181">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/2560.0.1920.1040@0.0.2048.1112" timestamp="1589976674181" />
   </component>
 </project>
