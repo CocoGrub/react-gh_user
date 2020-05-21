@@ -5,10 +5,13 @@ import Home from "./pages/Home";
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import About from "./pages/About";
 import Profile from "./pages/Profile";
+import AlertState from "./context/alert/alertState";
+import GitHubState from "./context/gitHub/gitHubState";
 
 const App=()=> {
     return (
-        <>
+        <GitHubState>
+    <AlertState>
           <BrowserRouter>
             <Navbar/>
             <div className="container pt-4">
@@ -20,8 +23,10 @@ const App=()=> {
                 </Switch>
                 </div>
           </BrowserRouter>
-        </>
-    );
+    </AlertState>
+        </GitHubState>
+            )
+
 }
 
 export default App;
