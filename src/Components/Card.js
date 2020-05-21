@@ -1,11 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
- const Card=()=>{
+ const Card=({user})=>{
     return <div className={"card"}>
-        <img src={""} alt={""} className={"card-image-top"}/>
+        <img src={user.avatar_url} alt={user.login} className={"card-image-top"}/>
         <div className={"card-body"}>
-            <div className={"card-title"}>React JS</div>
+            <div className={"card-title"}>{user.login}</div>
             <Link to={"/profile"} className={"btn btn-primary"} >Open</Link>
         </div>
 

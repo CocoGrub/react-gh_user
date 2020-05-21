@@ -1,5 +1,5 @@
 
-import {CLEAR_USERS, GET_REPOS, GET_USERS, SEARCH_USERS, SET_LOADING} from '../actionTypes';
+import {CLEAR_USERS, GET_REPOS, GET_USER, SEARCH_USERS, SET_LOADING} from '../actionTypes';
 
 const initialState={
     user:null,
@@ -13,7 +13,7 @@ export const gitHubReducer=(state=initialState,action)=>{
     switch (action.type) {
         case SEARCH_USERS:return {...state,users:action.payload,loading:false};
         case GET_REPOS: return {...state,repos: action.payload};
-        case GET_USERS: return {...state,user: action.payload};
+        case GET_USER: return {...state,user: action.payload};
         case CLEAR_USERS:return {...state,user: null};
         case SET_LOADING:return {...state,loading: true}
         default:return state;
@@ -33,13 +33,13 @@ export const getReposAC=(repos)=>{
         payload:repos
     }
 }
-
-export const getUsersAC=(users)=>{
+export const getUserAC=(user)=>{
     return {
-        type:GET_USERS,
-        payload:users
+        type:SEARCH_USERS,
+        payload:user
     }
 }
+
 
 export const clearUsersAC=()=>{
     return {
