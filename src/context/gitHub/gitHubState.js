@@ -7,28 +7,31 @@ const CLIENT_ID=process.env.REACT_APP_CLIENT_ID
 const CLIENT_SECRET=process.env.REACT_APP_CLIENT_SECRET
 
 const GitHubState = ({children}) => {
-    const [state, dispatch] = useReducer(gitHubReducer,{users:[]})
+    const [state, dispatch] = useReducer(gitHubReducer,{users:[],user:{},repos:[]})
     const{user,users,repos,loading}=state;
     const withCred=(url)=>{
         return `${url}client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
     }
 
-    const searchUsers = async (user) => {
-        setLoading()
-        const response = await axios.get(withCred(`https://api.github.com/search/users?q=${user}&`))
+    const searchUsers = async (users) => {
+        setLoading(true)
+        const response = await axios.get(withCred(`https://api.github.com/search/users?q=${users}&`))
         console.log(response.data.items)
         dispatch(searchUsersAC(response.data.items))
+        setLoading(false)
     }
 
     const getUser = async (name) => {
-        setLoading()
-        const response = await axios.get(withCred(`https://api.github.com/search/users${name}?`))
+        setLoading(true)
+        const response = await axios.get(withCred(`https://api.github.com/users/${name}?`))
+        console.log(`user`,response)
             dispatch(getUserAC(response.data))
+        setLoading(false)
     }
 
     const getRepos = async (name) => {
         setLoading()
-        const response = await axios.get(withCred(`https://api.github.com/search/users${name}/repos?per_page=5&`))
+        const response = await axios.get(withCred(`https://api.github.com/users/${name}/repos?per_page=5&`))
 
             dispatch(getReposAC(response.data))
     }
@@ -37,8 +40,8 @@ const GitHubState = ({children}) => {
         dispatch(clearUsersAC())
     }
 
-    const setLoading = async () => {
-        dispatch(SetLoadingAC())
+    const setLoading = async (x) => {
+        dispatch(SetLoadingAC(x))
     }
     return (
         <GitHubContext.Provider value={{searchUsers,getUser,getRepos,clearUsers,setLoading,user,users,repos,loading}}>

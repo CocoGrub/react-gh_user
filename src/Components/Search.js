@@ -3,7 +3,7 @@ import {AlertContext} from "../context/alert/alertContext";
 import GitHubContext from "../context/gitHub/gitHubContext";
 
 const Search = () => {
-    const {show} = useContext(AlertContext)
+    const {show,hide} = useContext(AlertContext)
     const github=useContext(GitHubContext)
     const [value, setValue] = useState("")
 
@@ -14,6 +14,7 @@ const Search = () => {
         }
         if(value.trim()){
             github.searchUsers(value.trim())
+            hide()
             ///make req //
         }else {
             show('ENTER USER DATA')

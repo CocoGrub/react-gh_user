@@ -14,8 +14,8 @@ export const gitHubReducer=(state=initialState,action)=>{
         case SEARCH_USERS:return {...state,users:action.payload,loading:false};
         case GET_REPOS: return {...state,repos: action.payload};
         case GET_USER: return {...state,user: action.payload};
-        case CLEAR_USERS:return {...state,user: null};
-        case SET_LOADING:return {...state,loading: true}
+        case CLEAR_USERS:return {...state,users: null};
+        case SET_LOADING:return {...state,loading: action.payload}
         default:return state;
     }
 }
@@ -35,7 +35,7 @@ export const getReposAC=(repos)=>{
 }
 export const getUserAC=(user)=>{
     return {
-        type:SEARCH_USERS,
+        type:GET_USER,
         payload:user
     }
 }
@@ -47,8 +47,9 @@ export const clearUsersAC=()=>{
     }
 }
 
-export const SetLoadingAC=()=>{
+export const SetLoadingAC=(x)=>{
     return {
         type:SET_LOADING,
+        payload:x
     }
 }
