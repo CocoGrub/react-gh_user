@@ -1,7 +1,5 @@
-react app
-search for github users.
-shows personal info of selected user
-you need .env.local in your root folder with keys
-format:
-REACT_APP_CLIENT_ID=your id
-REACT_APP_CLIENT_SECRET=your key
+### React app
+
+### ищем юзеров гитхаба и смотрим инфу о них
+
+### PS недофиксил ошибки с повторным просмотром профиля

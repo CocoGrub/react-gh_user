@@ -30,8 +30,6 @@ const alertReducer = (state=initialState, action) => {
 }
 
 export const hideAC = () => {
-    console.log('hideAC')
-
     return {type: HIDE_ALERT}
 }
 
